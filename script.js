@@ -157,9 +157,6 @@ button.addEventListener('click', async function() {
             };
 
             container.innerHTML = ""
-            // container.children.forEach(child => {
-            //     container.remove(child);
-            // })
             
             cityNameContainer.textContent = data.location.name + ", " + data.location.country;
 
@@ -210,9 +207,6 @@ button.addEventListener('click', async function() {
                 const currentTemp = document.createElement("span");
                 currentTemp.classList.add("current-temp");
 
-                // OLD structure from different API
-                // let averageTemp = (result.daily.temperature_2m_min[i] + result.daily.temperature_2m_max[i]) / 2;
-                // if(i === 0) averageTemp = result.current.temperature_2m;
                 currentTemp.innerHTML = data.forecast.forecastday[i].day.avgtemp_c + "°C";
                 currentTempBox.appendChild(currentTemp);
             
@@ -241,13 +235,3 @@ button.addEventListener('click', async function() {
         // alert("Hey are you sure you are not holding up your map upside down?")
     })
 })
-
-// This is a weather web application made for educational purposes. Please do not commercialize this project in any way whatsoever.
-// Made by a BeCode technical coach whom had a lot of fun making "bad code", and improved by the very learners of this class.
-// I want to mention that this is a fully working app, but can be optimized by: 
-// cleaning up, 
-// refactoring the code, 
-// renaming the variables, 
-// removing redundant code,
-// removing unnecessary comments,
-// storing information into variables for easier and more readable use 
